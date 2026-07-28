@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+entity dec2 is
+port(a1, a0, e: in std_logic; y3, y2, y1, y0: out std_logic );
+end dec2;
+Architecture struct of dec2 is
+Signal s0,s1,s3,s4,s5,s6: std_logic;
+Begin 
+g1: INVERTER port map (a1, s1);
+g2: INVERTER port map (a0, s0);
+g3: AND_2 port map (s1, s0, s3); 
+g4: AND_2 port map (s1, a0, s4); 
+g5: AND_2 port map (a1, s0, s5); 
+g6: AND_2 port map (a1, a0, s6); 
+g7: AND_2 port map (e, s3, y0);
+g8: AND_2 port map (e, s4, y1);
+g9: AND_2 port map (e, s5, y2);
+g10: AND_2 port map (e, s6, y3);
+end struct;
