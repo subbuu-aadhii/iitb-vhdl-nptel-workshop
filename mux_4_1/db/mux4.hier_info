@@ -1,0 +1,45 @@
+|DUT
+input_vector[0] => mux4:add_instance.se0
+input_vector[1] => mux4:add_instance.se1
+input_vector[2] => mux4:add_instance.inp0
+input_vector[3] => mux4:add_instance.inp1
+input_vector[4] => mux4:add_instance.inp2
+input_vector[5] => mux4:add_instance.inp3
+output_vector[0] <= mux4:add_instance.output
+
+
+|DUT|mux4:add_instance
+inp3 => MUX_2:g1.inp1
+inp2 => MUX_2:g1.inp2
+inp1 => MUX_2:g2.inp1
+inp0 => MUX_2:g2.inp2
+se1 => MUX_2:g3.s
+se0 => MUX_2:g1.s
+se0 => MUX_2:g2.s
+output <= MUX_2:g3.output
+
+
+|DUT|mux4:add_instance|MUX_2:g1
+inp1 => output.IN0
+inp2 => output.IN0
+s => output.IN1
+s => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|mux4:add_instance|MUX_2:g2
+inp1 => output.IN0
+inp2 => output.IN0
+s => output.IN1
+s => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|mux4:add_instance|MUX_2:g3
+inp1 => output.IN0
+inp2 => output.IN0
+s => output.IN1
+s => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
