@@ -1,0 +1,89 @@
+|DUT
+input_vector[0] => dec3:add_instance.e
+input_vector[1] => dec3:add_instance.a0
+input_vector[2] => dec3:add_instance.a1
+input_vector[3] => dec3:add_instance.a2
+output_vector[0] <= dec3:add_instance.y0
+output_vector[1] <= dec3:add_instance.y1
+output_vector[2] <= dec3:add_instance.y2
+output_vector[3] <= dec3:add_instance.y3
+output_vector[4] <= dec3:add_instance.y4
+output_vector[5] <= dec3:add_instance.y5
+output_vector[6] <= dec3:add_instance.y6
+output_vector[7] <= dec3:add_instance.y7
+
+
+|DUT|dec3:add_instance
+a2 => INVERTER:g1.A
+a2 => AND_2:g2.A
+a1 => DEC_2:g4.a1
+a1 => DEC_2:g5.a1
+a0 => DEC_2:g4.a0
+a0 => DEC_2:g5.a0
+e => AND_2:g2.B
+e => AND_2:g3.B
+y7 <= DEC_2:g4.y3
+y6 <= DEC_2:g4.y2
+y5 <= DEC_2:g4.y1
+y4 <= DEC_2:g4.y0
+y3 <= DEC_2:g5.y3
+y2 <= DEC_2:g5.y2
+y1 <= DEC_2:g5.y1
+y0 <= DEC_2:g5.y0
+
+
+|DUT|dec3:add_instance|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|dec3:add_instance|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|dec3:add_instance|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|dec3:add_instance|DEC_2:g4
+a1 => y2.IN0
+a1 => y3.IN0
+a1 => y1.IN0
+a1 => y0.IN0
+a0 => y1.IN1
+a0 => y3.IN1
+a0 => y2.IN1
+a0 => y0.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+e => y3.IN1
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|dec3:add_instance|DEC_2:g5
+a1 => y2.IN0
+a1 => y3.IN0
+a1 => y1.IN0
+a1 => y0.IN0
+a0 => y1.IN1
+a0 => y3.IN1
+a0 => y2.IN1
+a0 => y0.IN1
+e => y0.IN1
+e => y1.IN1
+e => y2.IN1
+e => y3.IN1
+y3 <= y3.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
+
+
