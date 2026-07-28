@@ -1,0 +1,78 @@
+|DUT
+input_vector[0] => pe:add_instance.d
+input_vector[1] => pe:add_instance.c
+input_vector[2] => pe:add_instance.b
+input_vector[3] => pe:add_instance.a
+output_vector[0] <= pe:add_instance.v
+output_vector[1] <= pe:add_instance.y0
+output_vector[2] <= pe:add_instance.y1
+
+
+|DUT|pe:add_instance
+a => INVERTER:g1.A
+a => OR_2:g5.A
+a => OR_2:g6.A
+a => OR_2:g8.B
+b => INVERTER:g2.A
+b => OR_2:g6.B
+b => OR_2:g9.B
+c => AND_2:g4.B
+c => OR_2:g7.A
+d => OR_2:g7.B
+y1 <= OR_2:g6.Y
+y0 <= OR_2:g5.Y
+v <= OR_2:g9.Y
+
+
+|DUT|pe:add_instance|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|INVERTER:g2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|AND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|OR_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|OR_2:g6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|OR_2:g7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|OR_2:g8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pe:add_instance|OR_2:g9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

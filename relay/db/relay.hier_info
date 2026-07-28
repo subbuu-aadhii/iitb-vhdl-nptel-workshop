@@ -1,0 +1,78 @@
+|DUT
+input_vector[0] => relay:add_instance.e
+input_vector[1] => relay:add_instance.d
+input_vector[2] => relay:add_instance.c
+input_vector[3] => relay:add_instance.b
+input_vector[4] => relay:add_instance.a
+output_vector[0] <= relay:add_instance.f
+
+
+|DUT|relay:add_instance
+a => INVERTER:g1.A
+a => AND_2:g6.B
+b => ~NO_FANOUT~
+c => INVERTER:g2.A
+c => AND_2:g7.B
+d => AND_2:g5.B
+e => INVERTER:g3.A
+e => AND_2:g8.B
+f <= OR_2:g10.Y
+
+
+|DUT|relay:add_instance|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|INVERTER:g2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|INVERTER:g3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|AND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|AND_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|AND_2:g6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|AND_2:g7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|AND_2:g8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|OR_2:g9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|relay:add_instance|OR_2:g10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
