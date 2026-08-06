@@ -1,0 +1,46 @@
+|DUT
+input_vector[0] => ha_v:add_instance.b
+input_vector[1] => ha_v:add_instance.a
+output_vector[0] << ha_v:add_instance.carry
+output_vector[1] << ha_v:add_instance.sum
+
+
+|DUT|ha_v:add_instance
+a => NAND_2:g1.A
+a => NAND_2:g2.A
+b => NAND_2:g1.B
+b => NAND_2:g3.A
+sum <= NAND_2:g4.Y
+carry <= NAND_2:g5.Y
+
+
+|DUT|ha_v:add_instance|NAND_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ha_v:add_instance|NAND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ha_v:add_instance|NAND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ha_v:add_instance|NAND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ha_v:add_instance|NAND_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
