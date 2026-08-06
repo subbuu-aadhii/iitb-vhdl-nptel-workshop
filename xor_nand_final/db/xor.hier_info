@@ -1,0 +1,38 @@
+|DUT
+input_vector[0] => xor_v:add_instance.b
+input_vector[1] => xor_v:add_instance.a
+output_vector[0] <= xor_v:add_instance.output
+
+
+|DUT|xor_v:add_instance
+a => NAND_2:g1.A
+a => NAND_2:g2.A
+b => NAND_2:g1.B
+b => NAND_2:g3.A
+output <= NAND_2:g4.Y
+
+
+|DUT|xor_v:add_instance|NAND_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|xor_v:add_instance|NAND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|xor_v:add_instance|NAND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|xor_v:add_instance|NAND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
