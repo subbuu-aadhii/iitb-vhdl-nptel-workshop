@@ -1,0 +1,118 @@
+|DUT
+input_vector[0] => ADDER_SUBTRACTOR_4BIT:add_instance.M
+input_vector[1] => ADDER_SUBTRACTOR_4BIT:add_instance.B[0]
+input_vector[2] => ADDER_SUBTRACTOR_4BIT:add_instance.B[1]
+input_vector[3] => ADDER_SUBTRACTOR_4BIT:add_instance.B[2]
+input_vector[4] => ADDER_SUBTRACTOR_4BIT:add_instance.B[3]
+input_vector[5] => ADDER_SUBTRACTOR_4BIT:add_instance.A[0]
+input_vector[6] => ADDER_SUBTRACTOR_4BIT:add_instance.A[1]
+input_vector[7] => ADDER_SUBTRACTOR_4BIT:add_instance.A[2]
+input_vector[8] => ADDER_SUBTRACTOR_4BIT:add_instance.A[3]
+output_vector[0] << ADDER_SUBTRACTOR_4BIT:add_instance.S[0]
+output_vector[1] << ADDER_SUBTRACTOR_4BIT:add_instance.S[1]
+output_vector[2] << ADDER_SUBTRACTOR_4BIT:add_instance.S[2]
+output_vector[3] << ADDER_SUBTRACTOR_4BIT:add_instance.S[3]
+output_vector[4] << ADDER_SUBTRACTOR_4BIT:add_instance.Cout
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance
+A[0] => FULL_ADDER:fa0.A
+A[1] => FULL_ADDER:fa1.A
+A[2] => FULL_ADDER:fa2.A
+A[3] => FULL_ADDER:fa3.A
+B[0] => XOR_2:x0.A
+B[1] => XOR_2:x1.A
+B[2] => XOR_2:x2.A
+B[3] => XOR_2:x3.A
+M => XOR_2:x0.B
+M => XOR_2:x1.B
+M => XOR_2:x2.B
+M => XOR_2:x3.B
+M => FULL_ADDER:fa0.Cin
+S[0] <= FULL_ADDER:fa0.S
+S[1] <= FULL_ADDER:fa1.S
+S[2] <= FULL_ADDER:fa2.S
+S[3] <= FULL_ADDER:fa3.S
+Cout <= FULL_ADDER:fa3.Cout
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|XOR_2:x0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|XOR_2:x2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|XOR_2:x3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|FULL_ADDER:fa0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|FULL_ADDER:fa1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|FULL_ADDER:fa2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ADDER_SUBTRACTOR_4BIT:add_instance|FULL_ADDER:fa3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

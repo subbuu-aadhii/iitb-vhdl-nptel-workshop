@@ -1,0 +1,38 @@
+-- DUT wrapper for the 4-bit Adder-Subtractor.
+-- Tracefile input/output ordering:
+--   input_vector  (8 downto 0): input_vector(8..5)=A3..A0, input_vector(4..1)=B3..B0, input_vector(0)=M
+--   output_vector (4 downto 0): output_vector(4)=Cout, output_vector(3..0)=S3..S0
+
+library ieee;
+use ieee.std_logic_1164.all;
+use work.Gates.all;
+
+entity DUT is
+  port (
+    input_vector  : in  std_logic_vector(8 downto 0);
+    output_vector : out std_logic_vector(4 downto 0)
+  );
+end entity;
+
+architecture DutWrap of DUT is
+begin
+  -- input_vector bit ordering (MSB to LSB): A3 A2 A1 A0 B3 B2 B1 B0 M
+  -- output_vector bit ordering (MSB to LSB): Cout S3 S2 S1 S0
+  addsub_instance: ADDER_SUBTRACTOR_4BIT
+    port map (
+      A(3) => input_vector(8),
+      A(2) => input_vector(7),
+      A(1) => input_vector(6),
+      A(0) => input_vector(5),
+      B(3) => input_vector(4),
+      B(2) => input_vector(3),
+      B(1) => input_vector(2),
+      B(0) => input_vector(1),
+      M          => input_vector(0),
+      Cout       => output_vector(4),
+      S(3)       => output_vector(3),
+      S(2)       => output_vector(2),
+      S(1)       => output_vector(1),
+      S(0)       => output_vector(0)
+    );
+end DutWrap;

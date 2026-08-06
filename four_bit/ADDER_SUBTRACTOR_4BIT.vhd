@@ -1,0 +1,63 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity ADDER_SUBTRACTOR_4BIT is
+port(
+    A    : in  std_logic_vector(3 downto 0);
+    B    : in  std_logic_vector(3 downto 0);
+    M    : in  std_logic;
+    S    : out std_logic_vector(3 downto 0);
+    Cout : out std_logic
+);
+end ADDER_SUBTRACTOR_4BIT;
+
+Architecture struct of ADDER_SUBTRACTOR_4BIT is
+
+-- B_xor holds the result of each B(i) XOR M
+-- When M=0: B_xor(i) = B(i)      addition
+-- When M=1: B_xor(i) = NOT B(i)  subtraction (two's complement)
+Signal B_xor0, B_xor1, B_xor2, B_xor3 : std_logic;
+
+-- Carry chain between the four full adder stages
+-- C0 is tied to M (injects the +1 for two's complement)
+Signal C0, C1, C2, C3 : std_logic;
+
+Begin
+
+-- XOR gates -- controlled inverter on each B bit
+-- XOR_2 port map (A, B, Y)
+-- Y = A XOR B
+-- When M=0: Y = B(i) XOR 0 = B(i)       
+-- When M=1: Y = B(i) XOR 1 = NOT B(i)   
+x0: XOR_2 port map (B(0), M, B_xor0);
+x1: XOR_2 port map (B(1), M, B_xor1);
+x2: XOR_2 port map (B(2), M, B_xor2);
+x3: XOR_2 port map (B(3), M, B_xor3);
+
+-- C0 = M
+-- When M=0: C0=0, no extra carry  --> A + B
+-- When M=1: C0=1, injects +1     --> A + NOT(B) + 1 = A - B
+
+C0 <= M;
+
+
+-- Four cascaded Full Adders (Ripple Carry chain)
+-- FULL_ADDER port map (A, B, Cin, S, Cout)
+-- Each stage adds A(i) + B_xor(i) + carry_in
+-- and passes carry_out to the next stage
+
+-- Bit 0: LSB stage, carry-in = C0 (which equals M)
+fa0: FULL_ADDER port map (A(0), B_xor0, C0, S(0), C1);
+
+-- Bit 1: carry-in = C1 from stage 0
+fa1: FULL_ADDER port map (A(1), B_xor1, C1, S(1), C2);
+
+-- Bit 2: carry-in = C2 from stage 1
+fa2: FULL_ADDER port map (A(2), B_xor2, C2, S(2), C3);
+
+-- Bit 3: MSB stage, carry-in = C3 from stage 2, carry-out = Cout
+fa3: FULL_ADDER port map (A(3), B_xor3, C3, S(3), Cout);
+
+end struct;
