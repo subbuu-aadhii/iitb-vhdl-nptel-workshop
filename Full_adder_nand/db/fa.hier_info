@@ -1,0 +1,73 @@
+|DUT
+input_vector[0] => fa:add_instance.a
+input_vector[1] => fa:add_instance.b
+input_vector[2] => fa:add_instance.c
+output_vector[0] <= fa:add_instance.carry
+output_vector[1] <= fa:add_instance.sum
+
+
+|DUT|fa:add_instance
+a => NAND_2:g1.A
+a => NAND_2:g2.A
+b => NAND_2:g1.B
+b => NAND_2:g3.B
+c => NAND_2:g5.B
+c => NAND_2:g7.B
+sum <= NAND_2:g8.Y
+carry <= NAND_2:g9.Y
+
+
+|DUT|fa:add_instance|NAND_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|fa:add_instance|NAND_2:g9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
