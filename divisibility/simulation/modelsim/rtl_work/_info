@@ -1,0 +1,568 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/divisibility/simulation/modelsim
+Eand_2
+Z1 w1780479955
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8D:/divisibility/Gates.vhdl
+Z5 FD:/divisibility/Gates.vhdl
+l0
+L63 1
+VP]`gk5b_OgnJoU[]nOkF]1
+!s100 23>nc=A;8k?he]d2F]k8j3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1780564882
+!i10b 1
+Z8 !s108 1780564882.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/divisibility/Gates.vhdl|
+Z10 !s107 D:/divisibility/Gates.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aequations
+R2
+R3
+DEx4 work 5 and_2 0 22 P]`gk5b_OgnJoU[]nOkF]1
+!i122 0
+l68
+L67 4
+V[;I[cRm32<64OQfTZQbW@0
+!s100 O?FZ1P;o_cbCXT:1SG_6b3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eand_4
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L74 1
+V=5QH1DFNN0f3N1C3H`dzg2
+!s100 <Woa;]LWZe?6mW2a1@aze3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 and_4 0 22 =5QH1DFNN0f3N1C3H`dzg2
+!i122 0
+l79
+L78 4
+VKT5gP34KTk^c]OhVJ2XE_3
+!s100 KRbKDzD62Ah[]<H79ge3>3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ediv
+Z13 w1780493180
+Z14 DPx4 work 5 gates 0 22 `=HK0DiSFbS^=6bNzZ?Fd0
+R2
+R3
+!i122 2
+R0
+Z15 8D:/divisibility/div.vhd
+Z16 FD:/divisibility/div.vhd
+l0
+L6 1
+VhS3=n6^oI@4jZGAC5aQIh2
+!s100 62OLa;dRIiI_CzTC:;CSG2
+R6
+31
+Z17 !s110 1780564883
+!i10b 1
+Z18 !s108 1780564883.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/divisibility/div.vhd|
+Z20 !s107 D:/divisibility/div.vhd|
+!i113 1
+R11
+R12
+Astruct
+R14
+R2
+R3
+DEx4 work 3 div 0 22 hS3=n6^oI@4jZGAC5aQIh2
+!i122 2
+l33
+L13 92
+V`BV9fI3G_e6KBWSKzEb`o1
+!s100 fH8<AGX4X4YMR[]Q>FeWX0
+R6
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Edut
+Z21 w1780481689
+R2
+R3
+!i122 1
+R0
+Z22 8D:/divisibility/DUT.vhdl
+Z23 FD:/divisibility/DUT.vhdl
+l0
+L8 1
+V^16Gok;ONBD>]mOm?PdaE2
+!s100 X[RM0kic_1o6hME_SiJ`I2
+R6
+31
+R17
+!i10b 1
+R8
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/divisibility/DUT.vhdl|
+Z25 !s107 D:/divisibility/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 ^16Gok;ONBD>]mOm?PdaE2
+!i122 1
+l20
+L13 15
+VoObA_KPHh>VP9NQ>S?hBQ0
+!s100 Ug1_Ac0T;<oG8zTnG=okE1
+R6
+31
+R17
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Pgates
+R2
+R3
+!i122 0
+R1
+R0
+R4
+R5
+l0
+L5 1
+V`=HK0DiSFbS^=6bNzZ?Fd0
+!s100 O_DSGfiMRY_4daS^M8S<@0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einverter
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L51 1
+V_SRUS6K5aWkV?IZHzXdgU0
+!s100 8m3ld:D60;ilfJc1E5XA>1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 8 inverter 0 22 _SRUS6K5aWkV?IZHzXdgU0
+!i122 0
+l56
+L55 4
+VGi=V]@_<JDQa8?Nj:IgQ71
+!s100 aMCHWn[N^^cg1GYOkmcLA0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L152 1
+V3b>F^j><5N`?3_S2FJ_[g1
+!s100 XD9MKe4;VO=a32YQKXNdn3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 mux_2 0 22 3b>F^j><5N`?3_S2FJ_[g1
+!i122 0
+l157
+L156 4
+VgA?Aj8eledKDYgo0h3n;k0
+!s100 bET9`j6;TR]2LAf^9coXo0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enand_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L85 1
+VDPW07hgUmnAhN=1fSXo@D0
+!s100 =P=XbUm98S=g9X=JM:GGc2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 nand_2 0 22 DPW07hgUmnAhN=1fSXo@D0
+!i122 0
+l90
+L89 4
+V_MSSa4I9]DNLj[1c9MHP61
+!s100 WGVP[?4<`i9_Ho4f0Ke7o1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L118 1
+V[=K2^WD`5IJ>=<aPjkh7S2
+!s100 Ma030`UmYW<NaOfW^NP@S0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 nor_2 0 22 [=K2^WD`5IJ>=<aPjkh7S2
+!i122 0
+l123
+L122 4
+Ve<FGJP0BSlPn3^W06Gc>01
+!s100 TBhP>0E[APIOBCHf75hW;0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L96 1
+V267JmbnjT;KQCe3APA^iH2
+!s100 NnWOO14gTXgUQof]`FH@i2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 4 or_2 0 22 267JmbnjT;KQCe3APA^iH2
+!i122 0
+l101
+L100 4
+VJ>NUAFOY_XUZE@NRM5eUB2
+!s100 Kl4fB<A?=64]5Qo4ZeD4G2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_4
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L107 1
+VioLDD<3CdZDD1zLMi5jL<2
+!s100 ;I^deTU?6gA8V`=:YXKHU2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 4 or_4 0 22 ioLDD<3CdZDD1zLMi5jL<2
+!i122 0
+l112
+L111 4
+V`LHIDFJ5gU`maEn_RS0Z63
+!s100 <K_eJL2ga1[c`>1OYgVi;0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z26 w1780479806
+R3
+R2
+!i122 3
+R0
+Z27 8D:/divisibility/Testbench.vhdl
+Z28 FD:/divisibility/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R17
+!i10b 1
+R18
+Z29 !s90 -reportprogress|300|-93|-work|work|D:/divisibility/Testbench.vhdl|
+!s107 D:/divisibility/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 3
+l69
+L9 132
+VBLV5m3<l@0]130Hia`ZhK1
+!s100 f1o9i7>Rf52Rj3?S?VaC`0
+R6
+31
+R17
+!i10b 1
+R18
+R29
+Z30 !s107 D:/divisibility/Testbench.vhdl|
+!i113 1
+R11
+R12
+Exnor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L141 1
+Vd4eS]R^DG^0RD5oj9gY:E2
+!s100 ch[oc9?4GzYFTf_k[OPYE1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 xnor_2 0 22 d4eS]R^DG^0RD5oj9gY:E2
+!i122 0
+l146
+L145 4
+VjGY7VG:CgH`EO5aLJJbCZ2
+!s100 TSLKQP6XJNC9_l6A>?3>10
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Exor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L130 1
+VUHMSMPhg;lPN];0m<Wf`[2
+!s100 h^Q44OA;KKX?SAcPdNbba3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 xor_2 0 22 UHMSMPhg;lPN];0m<Wf`[2
+!i122 0
+l135
+L134 4
+VIXa61=1^?Q4lbPNn4?ann0
+!s100 PkRTHMU:>[6<CcL_nk8RY3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
