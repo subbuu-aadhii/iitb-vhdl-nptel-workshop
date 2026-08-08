@@ -1,0 +1,127 @@
+|DUT
+input_vector[0] => prime:add_instance.x0
+input_vector[1] => prime:add_instance.x1
+input_vector[2] => prime:add_instance.x2
+input_vector[3] => prime:add_instance.x3
+input_vector[4] => prime:add_instance.x4
+output_vector[0] <= prime:add_instance.y
+
+
+|DUT|prime:add_instance
+x4 => INVERTER:g1.A
+x4 => AND_2:g9.A
+x4 => AND_4:g15.A
+x3 => INVERTER:g2.A
+x3 => XNOR_2:g10.A
+x2 => INVERTER:g3.A
+x2 => AND_2:g6.B
+x2 => XNOR_2:g10.B
+x2 => XOR_2:g12.A
+x2 => AND_4:g15.B
+x1 => AND_2:g5.B
+x1 => XOR_2:g12.B
+x1 => AND_4:g15.C
+x0 => AND_2:g6.A
+x0 => AND_2:g9.B
+x0 => AND_2:g11.B
+x0 => AND_4:g15.D
+y <= OR_4:g16.Y
+
+
+|DUT|prime:add_instance|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|INVERTER:g2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|INVERTER:g3
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|OR_2:g7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|XNOR_2:g10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|XOR_2:g12
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g13
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_2:g14
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|AND_4:g15
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|prime:add_instance|OR_4:g16
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
