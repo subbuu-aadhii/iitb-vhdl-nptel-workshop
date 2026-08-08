@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+entity bs is
+port(l,b2,b1,b0,a7,a6,a5,a4,a3,a2,a1,a0: in std_logic; s7,s6,s5,s4,s3,s2,s1,s0: out std_logic)
+end bs;
+Architecture struct of bs is
+Signal n1,n2,n3,n4,n5,n0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28,s29,s30,s31,s32,s33,s34,s35,s36,f1,f2,f3,f4,f5: std_logic;
+Begin 
+g1: MUX_2 port map (a0,a7,l,r0);
+g2: MUX_2 port map (a1,a6,l,r1);
+g3: MUX_2 port map (a2,a5,l,r2);
+g4: MUX_2 port map (a3,a4,l,r3);
+g5: MUX_2 port map (a4,a3,l,r4);
+g6: MUX_2 port map (a5,a2,l,r5);
+g7: MUX_2 port map (a6,a1,l,r6);
+g8: MUX_2 port map (a7,a0,l,r7);
+g9: MUX_2 port map (r0,r4,b2,t0);
+g10: MUX_2 port map (r1,r5,b2,t1);
+g11: MUX_2 port map (r2,r6,b2,t2);
+g12: MUX_2 port map (r3,r7,b2,t3);
+g13: MUX_2 port map (r4,0,b2,t4);
+g14: MUX_2 port map (r5,0,b2,t5);
+g15: MUX_2 port map (r6,0,b2,t6);
+g16: MUX_2 port map (r7,0,b2,t7);
+g17: MUX_2 port map (t0,t2,b1,u0);
+g18: MUX_2 port map (t1,t3,b1,u1);
+g19: MUX_2 port map (t2,t4,b1,u2);
+g20: MUX_2 port map (t3,t5,b1,u3);
+g21: MUX_2 port map (t4,t6,b1,u4);
+g22: MUX_2 port map (t5,t7,b1,u5);
+g23: MUX_2 port map (t6,0,b1,u6);
+g24: MUX_2 port map (t7,0,b1,u7);
+g25: MUX_2 port map (u0,u1,b0,v0);
+g26: MUX_2 port map (u1,u2,b0,v1);
+g27: MUX_2 port map (u2,u3,b0,v2);
+g28: MUX_2 port map (u3,u4,b0,v3);
+g29: MUX_2 port map (u4,u5,b0,v4);
+g30: MUX_2 port map (u5,u6,b0,v5);
+g31: MUX_2 port map (u6,u7,b0,v6);
+g32: MUX_2 port map (u7,0,b0,v7);
+g33: MUX_2 port map (v0,v7,l,s0);
+g34: MUX_2 port map (v1,v6,l,s1);
+g35: MUX_2 port map (v2,v5,l,s2);
+g36: MUX_2 port map (v3,v4,l,s3);
+g37: MUX_2 port map (v4,v3,l,s4);
+g38: MUX_2 port map (v5,v2,l,s5);
+g39: MUX_2 port map (v6,v1,l,s6);
+g40: MUX_2 port map (v7,v0,l,s7);
+end struct;
