@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+entity comp is
+port(b3,b2,b1,b0,a3,a2,a1,a0: in std_logic; gr,eq,le: out std_logic );
+end comp;
+Architecture struct of comp is
+Signal s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11: std_logic;
+Begin 
+g1: COMP_2 port map (a3,b3,'0','1','0',s0,s1,s2);
+g2: COMP_2 port map (a2,b2,s0,s1,s2,s3,s4,s5); 
+g3: COMP_2 port map (a1,b1,s3,s4,s5,s6,s7,s8);
+g4: COMP_2 port map (a0,b0,s6,s7,s8,le,eq,gr);
+end struct;

@@ -1,0 +1,96 @@
+|DUT
+input_vector[0] => comp:add_instance.a0
+input_vector[1] => comp:add_instance.a1
+input_vector[2] => comp:add_instance.a2
+input_vector[3] => comp:add_instance.a3
+input_vector[4] => comp:add_instance.b0
+input_vector[5] => comp:add_instance.b1
+input_vector[6] => comp:add_instance.b2
+input_vector[7] => comp:add_instance.b3
+output_vector[0] << comp:add_instance.le
+output_vector[1] << comp:add_instance.eq
+output_vector[2] << comp:add_instance.gr
+
+
+|DUT|comp:add_instance
+b3 => COMP_2:g1.B
+b2 => COMP_2:g2.B
+b1 => COMP_2:g3.B
+b0 => COMP_2:g4.B
+a3 => COMP_2:g1.A
+a2 => COMP_2:g2.A
+a1 => COMP_2:g3.A
+a0 => COMP_2:g4.A
+gr <= COMP_2:g4.le
+eq <= COMP_2:g4.eq
+le <= COMP_2:g4.gr
+
+
+|DUT|comp:add_instance|COMP_2:g1
+A => gr.IN0
+A => eq.IN0
+A => le.IN0
+B => eq.IN1
+B => le.IN1
+B => gr.IN1
+g => gr.IN1
+e => gr.IN1
+e => eq.IN1
+e => le.IN1
+l => le.IN1
+gr <= gr.DB_MAX_OUTPUT_PORT_TYPE
+eq <= eq.DB_MAX_OUTPUT_PORT_TYPE
+le <= le.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|comp:add_instance|COMP_2:g2
+A => gr.IN0
+A => eq.IN0
+A => le.IN0
+B => eq.IN1
+B => le.IN1
+B => gr.IN1
+g => gr.IN1
+e => gr.IN1
+e => eq.IN1
+e => le.IN1
+l => le.IN1
+gr <= gr.DB_MAX_OUTPUT_PORT_TYPE
+eq <= eq.DB_MAX_OUTPUT_PORT_TYPE
+le <= le.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|comp:add_instance|COMP_2:g3
+A => gr.IN0
+A => eq.IN0
+A => le.IN0
+B => eq.IN1
+B => le.IN1
+B => gr.IN1
+g => gr.IN1
+e => gr.IN1
+e => eq.IN1
+e => le.IN1
+l => le.IN1
+gr <= gr.DB_MAX_OUTPUT_PORT_TYPE
+eq <= eq.DB_MAX_OUTPUT_PORT_TYPE
+le <= le.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|comp:add_instance|COMP_2:g4
+A => gr.IN0
+A => eq.IN0
+A => le.IN0
+B => eq.IN1
+B => le.IN1
+B => gr.IN1
+g => gr.IN1
+e => gr.IN1
+e => eq.IN1
+e => le.IN1
+l => le.IN1
+gr <= gr.DB_MAX_OUTPUT_PORT_TYPE
+eq <= eq.DB_MAX_OUTPUT_PORT_TYPE
+le <= le.DB_MAX_OUTPUT_PORT_TYPE
+
+
