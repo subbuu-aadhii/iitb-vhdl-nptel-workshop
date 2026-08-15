@@ -1,0 +1,54 @@
+|DUT
+input_vector[0] => seq:add_instance.clk
+input_vector[1] => seq:add_instance.rst1
+input_vector[2] => seq:add_instance.x[0]
+input_vector[3] => seq:add_instance.x[1]
+input_vector[4] => seq:add_instance.x[2]
+input_vector[5] => seq:add_instance.x[3]
+input_vector[6] => seq:add_instance.x[4]
+output_vector[0] << seq:add_instance.y
+
+
+|DUT|seq:add_instance
+x[0] => Equal0.IN9
+x[0] => Equal1.IN9
+x[0] => Equal2.IN9
+x[0] => Equal3.IN9
+x[0] => Equal4.IN9
+x[0] => Equal5.IN9
+x[1] => Equal0.IN8
+x[1] => Equal1.IN8
+x[1] => Equal2.IN8
+x[1] => Equal3.IN8
+x[1] => Equal4.IN8
+x[1] => Equal5.IN8
+x[2] => Equal0.IN7
+x[2] => Equal1.IN7
+x[2] => Equal2.IN7
+x[2] => Equal3.IN7
+x[2] => Equal4.IN7
+x[2] => Equal5.IN7
+x[3] => Equal0.IN6
+x[3] => Equal1.IN6
+x[3] => Equal2.IN6
+x[3] => Equal3.IN6
+x[3] => Equal4.IN6
+x[3] => Equal5.IN6
+x[4] => Equal0.IN5
+x[4] => Equal1.IN5
+x[4] => Equal2.IN5
+x[4] => Equal3.IN5
+x[4] => Equal4.IN5
+x[4] => Equal5.IN5
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+rst1 => y_present.OUTPUTSELECT
+clk => y_present~1.DATAIN
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

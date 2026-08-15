@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/seq_det/simulation/modelsim
+Edut
+Z1 w1780638406
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8D:/seq_det/DUT.vhdl
+Z5 FD:/seq_det/DUT.vhdl
+l0
+L8 1
+V`4fAS?oXNaeiX0Od1>KI>1
+!s100 ^K550@PYeFF0865cPkI011
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1780649688
+!i10b 1
+Z8 !s108 1780649687.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/seq_det/DUT.vhdl|
+Z10 !s107 D:/seq_det/DUT.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 `4fAS?oXNaeiX0Od1>KI>1
+!i122 1
+l20
+L13 14
+V^=GYe0MN]Z1?cjc7l@IRj2
+!s100 HZF;W1Ln>kJR1_>:59J`10
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eseq
+Z13 w1780640153
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 0
+R0
+Z15 8D:/seq_det/seq.vhd
+Z16 FD:/seq_det/seq.vhd
+l0
+L4 1
+VXMZ6_JVjMoenQfOWHLGFM0
+!s100 <QB3zXd4?]ZY<B=K1_hWK0
+R6
+31
+Z17 !s110 1780649687
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/seq_det/seq.vhd|
+Z19 !s107 D:/seq_det/seq.vhd|
+!i113 1
+R11
+R12
+Abhv
+R14
+R2
+R3
+DEx4 work 3 seq 0 22 XMZ6_JVjMoenQfOWHLGFM0
+!i122 0
+l14
+L9 103
+V;L39V8R_4DiL^iC`2:P_D0
+!s100 N^4UP?NVgnCRnZhOgS6gm2
+R6
+31
+R17
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
+Etestbench
+Z20 w1780636400
+R3
+R2
+!i122 2
+R0
+Z21 8D:/seq_det/Testbench.vhdl
+Z22 FD:/seq_det/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+Z23 !s108 1780649688.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/seq_det/Testbench.vhdl|
+!s107 D:/seq_det/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 2
+l69
+L9 132
+V<IWceeceMWYIWh1G?g6zR2
+!s100 ;Vl43`hfg<<RZo1@5`nXW1
+R6
+31
+R7
+!i10b 1
+R23
+R24
+Z25 !s107 D:/seq_det/Testbench.vhdl|
+!i113 1
+R11
+R12
