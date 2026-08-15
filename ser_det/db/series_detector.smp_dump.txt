@@ -1,0 +1,13 @@
+
+State Machine - |DUT|ser:add_instance|y_present2
+Name y_present2.s5 y_present2.s4 y_present2.rst3 
+y_present2.rst3 0 0 0 
+y_present2.s4 0 1 1 
+y_present2.s5 1 0 1 
+
+State Machine - |DUT|ser:add_instance|y_present1
+Name y_present1.s3 y_present1.s2 y_present1.s1 y_present1.rst2 
+y_present1.rst2 0 0 0 0 
+y_present1.s1 0 0 1 1 
+y_present1.s2 0 1 0 1 
+y_present1.s3 1 0 0 1 
