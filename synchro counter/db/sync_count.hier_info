@@ -1,0 +1,23 @@
+|DUT
+input_vector[0] => sync:add_instance.rst
+input_vector[1] => sync:add_instance.clk
+output_vector[0] << sync:add_instance.q[0]
+output_vector[1] << sync:add_instance.q[1]
+output_vector[2] << sync:add_instance.q[2]
+
+
+|DUT|sync:add_instance
+clk => \counting:D[0].CLK
+clk => \counting:D[1].CLK
+clk => \counting:D[2].CLK
+rst => \counting:D[0].PRESET
+rst => \counting:D[1].PRESET
+rst => \counting:D[2].PRESET
+rst => \counting:D[2].ENA
+rst => \counting:D[1].ENA
+rst => \counting:D[0].ENA
+q[0] <= \counting:D[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= \counting:D[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= \counting:D[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
