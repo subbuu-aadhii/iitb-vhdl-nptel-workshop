@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Jun 04 14:18:20 2026
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : alu
+Top-level Entity Name : DUT
+Family : MAX V
+Device : 5M40ZE64C4
+Timing Models : Final
+Total logic elements : 31 / 40 ( 78 % )
+Total pins : 18 / 54 ( 33 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
