@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {D:/DAY 4 VHDL/synchro counter ff/Gates.vhdl}
+vcom -93 -work work {D:/DAY 4 VHDL/synchro counter ff/FlipFlops.vhdl}
+vcom -93 -work work {D:/DAY 4 VHDL/synchro counter ff/DUT.vhdl}
+vcom -93 -work work {D:/DAY 4 VHDL/synchro counter ff/sync_down_count.vhdl}
+

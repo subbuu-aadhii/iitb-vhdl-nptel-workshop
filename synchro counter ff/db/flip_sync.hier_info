@@ -1,0 +1,64 @@
+|DUT
+input_vector[0] => sync_down_count:add_instance.reset
+input_vector[1] => sync_down_count:add_instance.clock
+output_vector[0] <= sync_down_count:add_instance.Q[0]
+output_vector[1] <= sync_down_count:add_instance.Q[1]
+output_vector[2] <= sync_down_count:add_instance.Q[2]
+
+
+|DUT|sync_down_count:add_instance
+clock => dff_set:ff1.clock
+clock => dff_set:ff2.clock
+clock => dff_set:ff3.clock
+reset => dff_set:ff1.set
+reset => dff_set:ff2.set
+reset => dff_set:ff3.set
+Q[0] <= dff_set:ff1.Q
+Q[1] <= dff_set:ff2.Q
+Q[2] <= dff_set:ff3.Q
+
+
+|DUT|sync_down_count:add_instance|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|sync_down_count:add_instance|XNOR_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|sync_down_count:add_instance|OR_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|sync_down_count:add_instance|XNOR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|sync_down_count:add_instance|dff_set:ff1
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|sync_down_count:add_instance|dff_set:ff2
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|sync_down_count:add_instance|dff_set:ff3
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
